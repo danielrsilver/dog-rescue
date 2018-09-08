@@ -28,19 +28,19 @@ class DogForm extends React.Component {
           </label>
           <label>
           Location:
-          <input type="text" value={this.state.value} placeholder="City" />
+          <input type="text" value={this.state.value} placeholder="Zip or City, State" />
           </label>
           <label>
-            Color:
-            <input type="text" value={this.state.value} />
+          Gender:
+          <input type="text" value={this.state.value} placeholder="M or F" />
           </label>
           <label>
             Age:
-            <input type="text" value={this.state.value} />
+            <input type="text" value={this.state.value} placeholder="Baby, Young, Adult, Senior" />
           </label>
           <label>
-            Weight:
-            <input type="text" value={this.state.value} />
+            Size:
+            <input type="text" value={this.state.value} placeholder="S, M, L or XL" />
           </label>
           <label>
           <input type="submit" value="Submit" />
