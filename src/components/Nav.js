@@ -32,7 +32,7 @@ class Nav extends React.Component {
         <Link to="/contact" className="nav-link">Contact</Link>
       </li>
       <li class="nav-item">
-        <Link to="/form" className="nav-link">Form</Link>
+        <Link to="/form" className="nav-link">Search</Link>
       </li>
     </ul>
   </div>

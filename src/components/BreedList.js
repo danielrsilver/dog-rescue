@@ -10,7 +10,7 @@ class BreedList extends Component{
   }
 
   componentDidMount(){
-    axios.get("http://api.petfinder.com/breed.list?key=7d7127de0db19f217f7f0ebb59475ea5&format=json&output=full&animal=dog",{}).then((res)=>{
+    axios.get("http://api.petfinder.com/breed.list?key=api_key&format=json&output=full&animal=dog",{}).then((res)=>{
       //on success
       this.setState({userMsg:res.data});
     }).catch((error)=>{

@@ -5,9 +5,7 @@ import DogForm from './components/DogForm'
 import About from './components/About'
 import Contact from './components/Contact'
 import Adoption from './components/Adoption'
-
 import Nav from './components/Nav'
-
 import axios from 'axios'
 
 export default class App extends Component {
