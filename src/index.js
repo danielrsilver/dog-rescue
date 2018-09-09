@@ -1,5 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
-import DogForm from './components/dogForm'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import App from './App';
+import './index.css';
 
-render(<DogForm/>,document.getElementById('root'));
+const Root = () => {
+  return(
+    <Router>
+      <App/>
+    </Router>
+  )
+}
+
+
+
+render(<Root />, document.getElementById('root'));
