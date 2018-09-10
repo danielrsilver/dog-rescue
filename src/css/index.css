@@ -8,11 +8,11 @@
 
 
 body {
-    background-color: #EFEEF1;
+    background-color: white;
 }
 
 h1 {
-    color: blue;
+    color: black;
 }
 
 a:hover {
@@ -33,6 +33,15 @@ a:hover {
   margin-right:  10px;
 }
 
-p {
-    color: red;
+.form {
+  padding-top: 1em;
+  /* padding-right: 85%; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* border: 1em solid white; */
+}
+
+/* button {
+  background-color: #4286f4; */
 }

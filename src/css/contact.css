@@ -49,7 +49,7 @@ html,body {
 }
 .left,.right,.top{width: 0;	height: 0;position:absolute;top:0;z-index: 310;}
 .left{
-	border-left: 300px solid #337efc;
+	border-left: 5em solid #337efc;
 	border-top: 160px solid transparent;
 	border-bottom: 160px solid transparent;
 }
