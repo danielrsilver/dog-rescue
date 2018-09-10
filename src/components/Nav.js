@@ -26,18 +26,15 @@ class Nav extends React.Component {
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+  <div class="collapse DogFinder-collapse" id="dogFinder">
+    <ul class="DogFinder">
       <li class="nav-item">
         <Link to="/home" className="nav-link">Home </Link>
       </li>
       <li class="nav-item">
-        <Link to="/about" className="nav-link">About </Link>
-      </li>
-      <li class="nav-item">
         <Link to="/adoption" className="nav-link">Adoption </Link>
       </li>
-      <li class="nav-item">
+      <li class="footer-item">
         <Link to="/contact" className="nav-link">Contact</Link>
       </li>
     </ul>

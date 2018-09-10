@@ -1,0 +1,40 @@
+/* General ccs */
+* {
+  box-sizing: border-box;
+ }
+ body {
+   margin: 0;
+   font-family: 'Lato', sans-serif;
+ }
+ li {
+   list-style: none;
+ }
+
+/* HEADER */
+ #head {
+   display: flex;
+   flex-direction: row;
+  border: 2px solid lightgray;
+ }
+
+  header {
+    height: 7vh;
+  }
+  #logo {
+    width: 100px;
+  }
+  #logo-div{width: 20%;}
+
+  #search, #profile {
+    width: 40%;
+  }
+  #profile {
+    display: flex;
+  }
+  #search button { height: 100%; }
+  #bar {width:90%; height:100%;}
+  #mail {width: 60%;}
+  #g-plus {
+    height: 100%;
+    width: 150px;
+  }
