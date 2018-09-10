@@ -12,7 +12,7 @@ class Nav extends React.Component {
     return (
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">DogFinder</a>
+  <a class="navbar-brand" href="/search">DogFinder</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,7 +32,7 @@ class Nav extends React.Component {
         <Link to="/contact" className="nav-link">Contact</Link>
       </li>
       <li class="nav-item">
-        <Link to="/form" className="nav-link">Search</Link>
+        <Link to="/search" className="nav-link">Search</Link>
       </li>
     </ul>
   </div>

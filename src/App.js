@@ -17,11 +17,11 @@ export default class App extends Component {
             <Nav />
           </div>
             <Route path="/home" component={Home} />
-            <Route path="/form" component={DogForm} />
+            <Route path="/search" component={DogForm} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/adoption" component={Adoption} />
-          </div>
+        </div>
       </BrowserRouter>
     )
   }
