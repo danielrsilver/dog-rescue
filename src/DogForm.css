@@ -1,0 +1,21 @@
+#dogPics {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.form {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 15%;
+}
+
+.petRenderer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}

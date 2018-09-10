@@ -34,6 +34,7 @@ a:hover {
 }
 
 .form {
+<<<<<<< HEAD:src/index.css
   padding-top: 20px;
   text-align: center;
 
@@ -43,4 +44,16 @@ button {
   background-color: #4286f4;
   margin-left: 10px;
   font-size: 15px;
+=======
+  padding-top: 1em;
+  /* padding-right: 85%; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* border: 1em solid white; */
+}
+
+/* button {
+  background-color: #4286f4; */
+>>>>>>> 0e8fdc18d642bc1bf4fff7b09265279ab9466989:src/css/index.css
 }

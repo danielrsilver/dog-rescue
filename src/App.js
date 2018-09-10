@@ -6,23 +6,24 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Adoption from './components/Adoption'
 import Nav from './components/Nav'
-import axios from 'axios'
 
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div>
+      <div>
+        <BrowserRouter>
           <div>
-            <Nav />
+            <div>
+              <Nav />
+            </div>
+              <Route path="/home" component={Home} />
+              <Route path="/search" component={DogForm} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/adoption" component={Adoption} />
           </div>
-            <Route path="/home" component={Home} />
-            <Route path="/search" component={DogForm} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/adoption" component={Adoption} />
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </div>
     )
   }
 }
