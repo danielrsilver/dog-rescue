@@ -8,11 +8,11 @@
 
 
 body {
-    background-color: white;
+    background-color: #EFEEF1;
 }
 
 h1 {
-    color: black;
+    color: blue;
 }
 
 a:hover {
@@ -31,4 +31,8 @@ a:hover {
   word-spacing: 25em;
   border: 1px solid black;
   margin-right:  10px;
+}
+
+p {
+    color: red;
 }
