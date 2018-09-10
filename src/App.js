@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './components/Home'
-import DogForm from './components/DogForm'
+import DogForm from './components/dogForm'
 import About from './components/About'
 import Contact from './components/Contact'
 import Adoption from './components/Adoption'
