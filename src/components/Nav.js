@@ -1,10 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Home from './Home'
-import dogForm from './DogForm'
-import About from './About'
-import Contact from './Contact'
-import Adoption from './Adoption'
 import '../css/nav.css'
 
 class Nav extends React.Component {
