@@ -45,16 +45,6 @@ html,body {
   margin-top: 2%;
 }
 
-.flex-container {
-  display: flex;
-  height: 200px;
-  align-items: center;
-}
-
-.div {
-    resize: horizontal;
-    overflow: auto;
-}
 
 /* .pictures {
 	  padding: .5vw;

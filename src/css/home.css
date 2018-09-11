@@ -1,11 +1,23 @@
 
+.homepage {
+background-image: url("https://images.wallpaperscraft.com/image/wolf_rock_precipice_predator_120088_1400x1050.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+}
+
+
+.flex-container {
+display: flex;
+height: 300px;
+justify-content: center;
+align-items: center;
+}
+
 .flex-container {
   display: flex;
   height: 200px;
-  justify-content: center;
-}
-
-.div {
-    resize: horizontal;
-    overflow: auto;
+  justify-content: space-around;
+  align-items: center;
 }
