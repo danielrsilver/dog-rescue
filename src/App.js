@@ -1,19 +1,19 @@
 import React, {Component} from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './components/Home'
-import DogForm from './components/DogForm'
+import dogForm from './components/dogForm'
 import About from './components/About'
-import Contact from './components/Contact'
-import Adoption from './components/Adoption'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 
 
+import axios from 'axios'
+
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <BrowserRouter>
+      <BrowserRouter>
+        <div>
           <div>
             <div>
               <Nav />
@@ -26,9 +26,13 @@ export default class App extends Component {
             <div>
               <Footer />
             </div>
+            <Nav />
           </div>
-        </BrowserRouter>
-      </div>
+            <Route path="/home" component={Home} />
+            <Route path="/form" component={dogForm} />
+            <Route path="/about" component={About} />
+          </div>
+      </BrowserRouter>
     )
   }
 }
