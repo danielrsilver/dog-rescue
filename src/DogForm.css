@@ -21,21 +21,17 @@ html,body {
   margin-right: 2.5vw;
 }
 
-#form-breed {
-}
-
 .petRenderer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 5vw;
-	padding-bottom: 10vw;
   -webkit-overflow-scrolling: touch;
   background-color: #efeef1;
-
 
 }
 
@@ -46,13 +42,13 @@ html,body {
   margin-top: 2%;
 }
 
-/* .pictures {
-	  padding: .5vw;
-	  diaply: -ms-flexbox;
-	  -ms-flex-wrap: wrap;
-	  -ms-flex-direction: column;
-	  -webkit-flex-flow: row wrap;
-	  flex-flow: row wrap;
-	  display: -webkit-box;
-	  disply: flex;
-	} */
+.pictures {
+  padding: .5vw;
+  diaply: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  disply: flex;
+}

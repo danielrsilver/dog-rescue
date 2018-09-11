@@ -3,9 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './components/Home'
 import DogForm from './components/dogForm'
 import About from './components/About'
-import Contact from './components/Contact'
-import Adoption from './components/Adoption'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 export default class App extends Component {
   render() {
@@ -17,10 +16,11 @@ export default class App extends Component {
               <Nav />
             </div>
               <Route path="/home" component={Home} />
-              <Route path="/search" component={DogForm} />
               <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/adoption" component={Adoption} />
+              <Route path="/search" component={DogForm} />
+            <div>
+              <Footer />
+            </div>
           </div>
         </BrowserRouter>
       </div>

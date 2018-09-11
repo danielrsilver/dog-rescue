@@ -4,8 +4,8 @@
   font-weight: bold;
   padding-top: 40px;
   padding-left: 10px;
+  overflow: auto;
 }
-
 
 body {
     background-color: white;
@@ -35,13 +35,8 @@ a:hover {
 
 .form {
   padding-top: 1em;
-  /* padding-right: 85%; */
   text-align: center;
   display: flex;
   flex-direction: column;
   /* border: 1em solid white; */
-}
-
-/* button {
-  background-color: #4286f4; */
 }
