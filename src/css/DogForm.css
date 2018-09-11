@@ -28,13 +28,14 @@ html,body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 5vw;
+	padding-bottom: 10vw;
   -webkit-overflow-scrolling: touch;
   background-color: #efeef1;
+
 
 }
 

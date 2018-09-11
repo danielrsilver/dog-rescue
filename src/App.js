@@ -6,6 +6,8 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Adoption from './components/Adoption'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
+
 
 export default class App extends Component {
   render() {
@@ -21,6 +23,9 @@ export default class App extends Component {
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
               <Route path="/adoption" component={Adoption} />
+            <div>
+              <Footer />
+            </div>
           </div>
         </BrowserRouter>
       </div>
