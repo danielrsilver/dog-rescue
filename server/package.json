@@ -1,0 +1,17 @@
+{
+  "name": "dog-finder",
+  "version": "1.0.0",
+  "description": "Searching for dogs using the PetFinder API",
+  "main": "server.js",
+  "author": "Daniel Silver",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
