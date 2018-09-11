@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
 import Home from './Home'
 import dogForm from './dogForm'
 import About from './About'
-import Adoption from './Adoption'
 
 class Nav extends React.Component {
   render() {
@@ -23,9 +20,6 @@ class Nav extends React.Component {
       </li>
       <li class="nav-item">
         <Link to="/about" className="nav-link">About </Link>
-      </li>
-      <li class="nav-item">
-        <Link to="/adoption" className="nav-link">Adoption </Link>
       </li>
       <li class="nav-item">
         <Link to="/form" className="nav-link">Search</Link>
