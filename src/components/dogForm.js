@@ -184,16 +184,13 @@ class DogForm extends React.Component {
                 </select>
             </label>
             <label>
-                <button class="button" onClick={this.findPets}>
-
-                  <div class="ui animated button" tabindex="0" onClick={this.findPets}>
-                    <div class="visible content">
-                      Search</div>
-                    <div class="hidden content">
-                      <i class="right arrow icon"></i>
-                    </div>
-                  </div>
-                </button>
+              <div class="ui animated button" tabindex="0" onClick={this.findPets}>
+                <div class="visible content">
+                  Search</div>
+                <div class="hidden content">
+                  <i class="right arrow icon"></i>
+                </div>
+              </div>
             </label>
             <div class='petRenderer'>
                 { pets.map(this.petRenderer) }
