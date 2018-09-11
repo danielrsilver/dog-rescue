@@ -1,14 +1,5 @@
-.homepage {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-top: 40px;
-  padding-left: 10px;
-  overflow: auto;
-}
-
 body {
-    background-color: white;
+  background-color: #EFEEF1;
 }
 
 h1 {
@@ -19,24 +10,10 @@ a:hover {
   border-bottom: 2px solid #4286f4;
 }
 
-.about {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-top: 40px;
-  padding-left: 10px;
-}
-
-.founders {
-  word-spacing: 25em;
-  border: 1px solid black;
-  margin-right:  10px;
-}
 
 .form {
   padding-top: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* border: 1em solid white; */
 }

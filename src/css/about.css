@@ -1,24 +1,47 @@
 .about {
-	background-color: #EFEEF1;
+  text-align: center;
+  font-weight: bold;
+	padding-top: 2.5vw;
+	font-size: .9em;
 }
 
 .about-header {
   color: black;
+	font-size: 2em;
 }
 
 .about-paragraph {
   text-align: justify;
+	margin-top: 3vw;
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
 .about-header-founders {
-  margin-bottom: 2.5vw;
+	margin-top: 5vw;
 }
 
 .about-founders {
-  word-spacing: 20vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   margin-right: 5vw;
   margin-left: 5vw;
-	padding-bottom: 50vw;
+	margin-top: 2.5vw;
+	padding-bottom: 20vw;
+}
+
+.daniel {
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.maria {
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.taylor {
+	margin-left: 5vw;
+	margin-right: 5vw;
 }

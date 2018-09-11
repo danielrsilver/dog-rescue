@@ -1,21 +1,26 @@
 .homepage {
   background-color: #EFEEF1;
-}
-
-.home-search-button {
-  margin-top: 2.5vw;
-  margin-bottom: 5vw;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 7.5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  overflow: auto;
 }
 
 .home-paragraph1 {
-  margin-right: 5vw;
-  margin-left: 5vw;
   margin-bottom: 5vw;
   text-align: justify;
+  font-size: 1.2em;
 }
 
 .home-paragraph2 {
-  margin-right: 5vw;
-  margin-left: 5vw;
-  padding-bottom: 55vw;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.home-search-button {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  padding-bottom: 20vw;
 }
