@@ -15,7 +15,6 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <div>
-<<<<<<< HEAD
             <div>
               <Nav />
             </div>
@@ -27,13 +26,11 @@ export default class App extends Component {
             <div>
               <Footer />
             </div>
-=======
             <Nav />
           </div>
             <Route path="/home" component={Home} />
             <Route path="/form" component={dogForm} />
             <Route path="/about" component={About} />
->>>>>>> 070b4fa469283a922c06d2386f6dbe1d6a8aacb4
           </div>
       </BrowserRouter>
     )

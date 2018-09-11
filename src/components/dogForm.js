@@ -111,15 +111,13 @@ class DogForm extends React.Component {
               </div>
             </div>);
     }
->>>>>>> 070b4fa469283a922c06d2386f6dbe1d6a8aacb4
 
   render() {
       const { breeds, pets } = this.state;
     return (
         <div className="dogform">
-<<<<<<< HEAD
             <label className="form" class="form">
-=======
+
             <label className="form">
                 Breed:
                 <select ref={(ref)=>{this.breedRef = ref}}>
@@ -129,7 +127,6 @@ class DogForm extends React.Component {
                 </select>
             </label>
             <label className="form">
->>>>>>> 070b4fa469283a922c06d2386f6dbe1d6a8aacb4
                 Location:
                 <select ref={(ref)=>{this.locationRef = ref}} >
                   <option value={'Alabama'}>Alabama</option>
@@ -185,14 +182,12 @@ class DogForm extends React.Component {
                   <option value={'Wyoming'}>Wyoming</option>
                 </select>
             </label>
-<<<<<<< HEAD
             <label className="form" class="form" id="form-breed">
                 Breed:
                 <select ref={(ref)=>{this.breedRef = ref}}>
                     {breeds.map((item)=>{
                     return <option key={item.value} value={item.value}>{item.value}</option>
                 })}
-=======
             <label className="form">
                 Age:
                 <select ref={(ref)=>{this.ageRef = ref}}>
@@ -200,7 +195,6 @@ class DogForm extends React.Component {
                     <option value={'Young'}>Young</option>
                     <option value={'Adult'}>Adult</option>
                     <option value={'Senior'}>Senior</option>
->>>>>>> 070b4fa469283a922c06d2386f6dbe1d6a8aacb4
                 </select>
             </label>
             <label className="form" class="form">
@@ -213,7 +207,6 @@ class DogForm extends React.Component {
             <label className="form" class="form">
                 Size:
                 <select ref={(ref)=>{this.sizeRef = ref}}>
-<<<<<<< HEAD
                   <option value={'S'}>Small</option>
                   <option value={'M'}>Medium</option>
                   <option value={'L'}>Large</option>
@@ -242,7 +235,6 @@ class DogForm extends React.Component {
                 </button>
             </label>
             <div class='petRenderer'>
-=======
                   <option value={'S'}>S</option>
                   <option value={'M'}>M</option>
                   <option value={'L'}>L</option>
@@ -253,7 +245,6 @@ class DogForm extends React.Component {
                 <button onClick={this.findPets}>Submit</button>
             </label>
             <div style={{overflow:'auto',width:'80%',margin:'auto'}}>
->>>>>>> 070b4fa469283a922c06d2386f6dbe1d6a8aacb4
                 { pets.map(this.petRenderer) }
             </div>
         </div>
