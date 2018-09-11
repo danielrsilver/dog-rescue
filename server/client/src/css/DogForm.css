@@ -16,8 +16,13 @@ html,body {
   margin-left: 2.5vw;
 	margin-right: 2.5vw;
   padding-top: 2.5vw;
-  overflow-x: auto;
+  /* overflow: hidden;
+	white-space: nowrap; */
 }
+
+/* label, option {
+  display: flexbox;
+} */
 
 .petRenderer {
   display: flex;
@@ -28,14 +33,13 @@ html,body {
   padding-right: 5vw;
   padding-top: 5vw;
 	padding-bottom: 10vw;
-  -webkit-overflow-scrolling: touch;
+  /* -webkit-overflow-scrolling: touch; */
   background-color: #efeef1;
 }
 
 .search-button {
   margin-left: 2.5vw;
-  margin-right: 85vw;
-  margin-top: 2%;
+  margin-top: 2.5vw;
 	display: flex;
 }
 

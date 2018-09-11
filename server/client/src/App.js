@@ -5,6 +5,7 @@ import DogForm from './components/DogForm'
 import About from './components/About'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+// import DogPage from './components/DogPage'
 
 export default class App extends Component {
   render() {
@@ -27,3 +28,5 @@ export default class App extends Component {
     )
   }
 }
+
+// <Route path="/id" component={() => <DogPage />} />

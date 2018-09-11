@@ -7,7 +7,7 @@ import './css/index.css';
 const Root = () => {
   return(
     <Router>
-      <App/>
+      <App />
     </Router>
   )
 }

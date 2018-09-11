@@ -10,15 +10,15 @@ export default class About extends Component {
           <h2 class="about-header-founders">Who are the Founders?</h2>
           <div className="about-founders">
             <div class="daniel">
-              <img class="ui small circular image" src={require('../images/Daniel.jpg')} />
+              <img class="ui small circular image" alt="daniel" src={require('../images/Daniel.jpg')} />
               <p>Daniel</p>
             </div>
             <div class="maria">
-              <img class="ui small circular image" src={require('../images/Maria.jpg')} />
+              <img class="ui small circular image" alt="maria" src={require('../images/Maria.jpg')} />
               <p>Maria</p>
             </div>
             <div class="taylor">
-              <img class="ui small circular image" src={require('../images/Taylor.jpg')} />
+              <img class="ui small circular image" alt="taylor" src={require('../images/Taylor.jpg')} />
               <p>Taylor</p>
             </div>
           </div>
