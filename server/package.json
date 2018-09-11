@@ -1,5 +1,5 @@
 {
-  "name": "Dog Finder",
+  "name": "dog-finder",
   "version": "1.0.0",
   "description": "Searching for dogs using the PetFinder API",
   "main": "server.js",
