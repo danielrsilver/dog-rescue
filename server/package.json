@@ -1,9 +1,9 @@
 {
-  "name": "weather",
+  "name": "Dog Finder",
   "version": "1.0.0",
-  "description": "weather forecast api",
+  "description": "Searching for dogs using the PetFinder API",
   "main": "server.js",
-  "author": "karlen",
+  "author": "Daniel Silver",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.1",
