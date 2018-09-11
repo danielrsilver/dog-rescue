@@ -36,7 +36,6 @@ html,body {
   -webkit-overflow-scrolling: touch;
   background-color: #efeef1;
 
-
 }
 
 .button {
@@ -44,6 +43,17 @@ html,body {
   margin-left: 2.5vw;
   margin-right: 85vw;
   margin-top: 2%;
+}
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+
+.div {
+    resize: horizontal;
+    overflow: auto;
 }
 
 /* .pictures {

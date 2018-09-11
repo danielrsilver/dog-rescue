@@ -1,16 +1,11 @@
-.
 
-header {
-  padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
+.flex-container {
+  display: flex;
+  height: 200px;
+  justify-content: center;
 }
 
-
-
-
-h1 {
-  border: solid 1px;
-  color: #ffe3de;
-  font-size:40px;
+.div {
+    resize: horizontal;
+    overflow: auto;
 }
