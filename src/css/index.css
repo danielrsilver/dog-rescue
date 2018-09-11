@@ -35,7 +35,6 @@ a:hover {
 
 .form {
   padding-top: 1em;
-  /* padding-right: 85%; */
   text-align: center;
   display: flex;
   flex-direction: column;
