@@ -8,7 +8,7 @@ class Nav extends React.Component {
   render() {
     return (
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">DogFinder</a>
+  <a class="navbar-brand" href="/home">DogFinder</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
