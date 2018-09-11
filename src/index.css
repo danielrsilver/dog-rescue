@@ -4,19 +4,29 @@
   font-weight: bold;
   padding-top: 40px;
   padding-left: 10px;
+  border: 2px solid #42bcf4;
+  background-color: #42bcf4;
+  color: white;
 }
 
 
 body {
     background-color: white;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 40px;
 }
 
 h1 {
-    color: black;
+    color: white;
 }
 
 a:hover {
   border-bottom: 2px solid #4286f4;
+}
+
+a:link {
+  color: white;
 }
 
 .about {
@@ -34,26 +44,46 @@ a:hover {
 }
 
 .form {
-<<<<<<< HEAD:src/index.css
-  padding-top: 20px;
+  padding-top: 1em;
   text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 button {
   background-color: #4286f4;
   margin-left: 10px;
   font-size: 15px;
-=======
-  padding-top: 1em;
-  /* padding-right: 85%; */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  /* border: 1em solid white; */
 }
 
-/* button {
-  background-color: #4286f4; */
->>>>>>> 0e8fdc18d642bc1bf4fff7b09265279ab9466989:src/css/index.css
+#footer {
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  position: fixed;
+  background-color: #4286f4;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  color: white;
+}
+
+.footer-block {
+  color: white;
+  text-align: center;
+  padding-left: 0px;
+  text-decoration: none;
+}
+
+.homeparagraph1 {
+  text-align: center;
+  width: inherit;
+  padding-right: 10px;
+  padding-bottom: 45px;
+}
+
+i {
+  width: 150px;
 }
