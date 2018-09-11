@@ -1,5 +1,6 @@
+import React, { Component } from 'react';
 import React from 'react';
-import {API_URL, getQueryParams, getProp} from "../utilis";
+import {API_URL, getQueryParams, getProp} from "../utils";
 
 class DogForm extends React.Component {
   constructor(props) {
@@ -80,7 +81,11 @@ class DogForm extends React.Component {
      } else {
          return null
      }
+<<<<<<< HEAD
             return (<div className="pictures" style={{display:'inline-block',width:'20%',height:'300px','marginTop':'30px'}} key={petId}>
+=======
+            return (<div style={{display:'inline-block',width:'20%',height:'300px','marginTop':'30px'}} key={petId}>
+>>>>>>> master
                 <div>
                     <span>Name: </span>
                     <span>{name}</span>
@@ -97,11 +102,17 @@ class DogForm extends React.Component {
                     <span>Contact: </span>
                     <span>{contact}</span>
                 </div>
+<<<<<<< HEAD
                 <div className="pictures">
                 <img onClick={()=>{
                     this.openDetails(pet);
                   }} style={{display:'block',width:'100',maxHeight:'150px'}} src={photo}/>
               </div>
+=======
+                <img onClick={()=>{
+                    this.openDetails(pet);
+                  }} style={{display:'block',width:'100',maxHeight:'150px'}} src={photo}/>
+>>>>>>> master
             </div>);
     }
 
@@ -199,7 +210,11 @@ class DogForm extends React.Component {
                 </select>
             </label>
             <label>
+<<<<<<< HEAD
                 <button class ="ui blue button" onClick={this.findPets}>Submit</button>
+=======
+                <button onClick={this.findPets}>Submit</button>
+>>>>>>> master
             </label>
             <div style={{overflow:'auto',width:'80%',margin:'auto'}}>
                 { pets.map(this.petRenderer) }
