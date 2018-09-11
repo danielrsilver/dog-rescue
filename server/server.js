@@ -4,8 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const app = express();
-const port = 3300;
-
+const PORT = process.env.PORT || 3300;
 
 const allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -15,7 +14,7 @@ const allowCrossDomain = function(req, res, next) {
     next();
 }
 
-function defaultResponseHnadler(res, json, err) {
+function defaultResponseHandler(res, json, err) {
     if (err) {
         res.send({'error': err.message || 'An error has occurred while fetching'});
     } else {
@@ -28,9 +27,7 @@ function defaultResponseHnadler(res, json, err) {
 
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
-app.listen(port, function () {
-    console.log('application is running on port  ' + port);
-});
+app.listen(PORT, () => console.log(`application is running on port ${PORT}`));
 
 const API_URL = 'http://api.petfinder.com';
 
@@ -50,11 +47,11 @@ app.get('/breeds', function (req, res) {
         .then(function (respText) {
             if (respText) {
                 respText = respText.replace("?(",'').replace(');','');
-                defaultResponseHnadler(res, JSON.parse(respText));
+                defaultResponseHandler(res, JSON.parse(respText));
             }
         })
         .catch(function (err) {
-            defaultResponseHnadler(res, null, err);
+            defaultResponseHandler(res, null, err);
         });
 });
 
@@ -67,11 +64,11 @@ app.get('/find', function (req, res) {
         })
         .then(function (respJson) {
             if (respJson) {
-                defaultResponseHnadler(res, respJson);
+                defaultResponseHandler(res, respJson);
             }
         })
         .catch(function (err) {
-            defaultResponseHnadler(res, null, err);
+            defaultResponseHandler(res, null, err);
         });
 });
 
