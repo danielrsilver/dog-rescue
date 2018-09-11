@@ -199,7 +199,7 @@ class DogForm extends React.Component {
                 </select>
             </label>
             <label>
-                <button onClick={this.findPets}>Submit</button>
+                <button class ="ui blue button" onClick={this.findPets}>Submit</button>
             </label>
             <div style={{overflow:'auto',width:'80%',margin:'auto'}}>
                 { pets.map(this.petRenderer) }
