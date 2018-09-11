@@ -1,0 +1,58 @@
+html,body {
+	background:#EFEEF1;
+}
+
+.dogPics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vw;
+  /* padding-left: 2.5%;
+  padding-right: 2.5%; */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.form {
+  margin-left: 2.5vw;
+  padding-top: 2.5vw;
+  overflow-x: auto;
+  margin-right: 2.5vw;
+}
+
+#form-breed {
+}
+
+.petRenderer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vw;
+	padding-bottom: 10vw;
+  -webkit-overflow-scrolling: touch;
+  background-color: #efeef1;
+
+
+}
+
+.button {
+  display: flex;
+  margin-left: 2.5vw;
+  margin-right: 85vw;
+  margin-top: 2%;
+}
+
+/* .pictures {
+	  padding: .5vw;
+	  diaply: -ms-flexbox;
+	  -ms-flex-wrap: wrap;
+	  -ms-flex-direction: column;
+	  -webkit-flex-flow: row wrap;
+	  flex-flow: row wrap;
+	  display: -webkit-box;
+	  disply: flex;
+	} */
