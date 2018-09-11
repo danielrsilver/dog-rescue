@@ -183,7 +183,7 @@ class DogForm extends React.Component {
                     <option value={'Senior'}>Senior</option>
                 </select>
             </label>
-            <label>
+            <label class="search-button">
               <div class="ui animated button" tabindex="0" onClick={this.findPets}>
                 <div class="visible content">
                   Search</div>

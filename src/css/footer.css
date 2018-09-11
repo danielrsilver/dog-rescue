@@ -2,10 +2,15 @@
   position: fixed;
   flex-shrink: 0;
   bottom: 0;
-  min-height: 2vw;
+  min-height: 5vw;
   overflow: hide;
   clear: both;
   width: 100%;
   color: #FFFFFF;
   background-color: #395def;
+  font: white;
+}
+
+.footer-block {
+  color: white;
 }

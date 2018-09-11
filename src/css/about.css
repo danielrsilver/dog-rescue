@@ -12,14 +12,13 @@
   margin-right: 5vw;
 }
 
-.about-founders-header {
+.about-header-founders {
   margin-bottom: 2.5vw;
 }
 
 .about-founders {
   word-spacing: 20vw;
-  border: 1px solid black;
   margin-right: 5vw;
   margin-left: 5vw;
-
+	padding-bottom: 50vw;
 }

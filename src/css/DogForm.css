@@ -16,12 +16,9 @@ html,body {
 
 .form {
   margin-left: 2.5vw;
+	margin-right: 2.5vw;
   padding-top: 2.5vw;
   overflow-x: auto;
-  margin-right: 2.5vw;
-}
-
-#form-breed {
 }
 
 .petRenderer {
@@ -32,14 +29,12 @@ html,body {
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 5vw;
-	padding-bottom: 10vw;
+	padding-bottom: 50vw;
   -webkit-overflow-scrolling: touch;
   background-color: #efeef1;
-
-
 }
 
-.button {
+.search-button {
   display: flex;
   margin-left: 2.5vw;
   margin-right: 85vw;
