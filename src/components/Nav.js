@@ -20,7 +20,7 @@ class Nav extends React.Component {
               <Link to="/about" className="nav-link">About </Link>
             </li>
             <li class="nav-item">
-              <Link to="/form" className="nav-link">Search</Link>
+              <Link to="/search" className="nav-link">Search</Link>
             </li>
           </ul>
         </div>
