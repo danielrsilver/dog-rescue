@@ -84,6 +84,7 @@ export default class DogForm extends React.Component {
      return (<div className="pictures" key={petId}>
        <div class='dogInfo' key={petId}>
         <a href={`pets/${petId}`}><img class='dogPics' alt='dogPictures' src={photo}/></a>
+        <a style={{color:'#000000'}} href={`pets/${petId}`} target="_blank">See details</a>
       </div>
     </div>);
 }

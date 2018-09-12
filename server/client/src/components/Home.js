@@ -9,7 +9,7 @@ export default class Home extends Component {
         <h1 className="h1">DogFinder</h1>
           <i class="fas fa-paw fa-2x"></i>
 
-        <h2 class="home-paragraph1">Dogfinder is a way to centralize canine rescuing nationally. We saw a flaw in the adoption process for animals. Dogfinder gives you the ability to search all rescue groups nationally in one location. You can be as specific as the dogs breed, gender, age and more! All you need to do is simply fill out the form and you're one step closer to adopting your dream dog!</h2>
+        <h2 class="home-paragraph1">Dogfinder is a way to centralize canine rescuing nationally. We saw a flaw in the adoption process for animals. Dogfinder gives you the ability to search all rescue groups nationally in one location. You can be as specific as the dogs breed, gender, age and more! All you need to do is simply fill out the form and you are one step closer to adopting your dream dog!</h2>
 
         <h2 class="home-paragraph2">There are thousands of adoptable pets looking for a lovable home.</h2>
         <h2 class="home-paragraph2">Help a dog find their new home today!</h2>
