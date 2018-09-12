@@ -1,0 +1,17 @@
+.dogInformation {
+  padding-top: 5vw;
+  padding-right: 5vw;
+  padding-left: 7.5vw;
+  font-size: 3vw;
+  font-weight: bold;
+  width: 60%;
+  float: left;
+  line-height: 1.5em;
+}
+
+.imageContainer {
+  padding-top: 5vw;
+  padding-right: 7.5vw;
+
+  float: right;
+}

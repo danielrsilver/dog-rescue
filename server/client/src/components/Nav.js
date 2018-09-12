@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Nav extends React.Component {
+export default class Nav extends React.Component {
   render() {
     return (
       <div class="header">
@@ -29,5 +29,3 @@ class Nav extends React.Component {
     );
   }
 }
-
-export default Nav;

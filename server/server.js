@@ -4,7 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const app = express();
-const PORT = process.env.PORT || 3300;
+const port = 3300;
+
 
 const allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -14,7 +15,7 @@ const allowCrossDomain = function(req, res, next) {
     next();
 }
 
-function defaultResponseHandler(res, json, err) {
+function defaultResponseHnadler(res, json, err) {
     if (err) {
         res.send({'error': err.message || 'An error has occurred while fetching'});
     } else {
@@ -27,7 +28,9 @@ function defaultResponseHandler(res, json, err) {
 
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
-app.listen(PORT, () => console.log(`application is running on port ${PORT}`));
+app.listen(port, function () {
+    console.log('application is running on port  ' + port);
+});
 
 const API_URL = 'http://api.petfinder.com';
 
@@ -47,11 +50,11 @@ app.get('/breeds', function (req, res) {
         .then(function (respText) {
             if (respText) {
                 respText = respText.replace("?(",'').replace(');','');
-                defaultResponseHandler(res, JSON.parse(respText));
+                defaultResponseHnadler(res, JSON.parse(respText));
             }
         })
         .catch(function (err) {
-            defaultResponseHandler(res, null, err);
+            defaultResponseHnadler(res, null, err);
         });
 });
 
@@ -64,11 +67,28 @@ app.get('/find', function (req, res) {
         })
         .then(function (respJson) {
             if (respJson) {
-                defaultResponseHandler(res, respJson);
+                defaultResponseHnadler(res, respJson);
             }
         })
         .catch(function (err) {
-            defaultResponseHandler(res, null, err);
+            defaultResponseHnadler(res, null, err);
+        });
+});
+
+app.get('/get/:id', function (req, res) {
+    fetch(`${API_URL}/pet.get?key=${process.env.PETFINDER_API_KEY}&format=json&id=${req.params.id}`)
+        .then(function (response) {
+            if (response.status < 400) {
+                return response.json();
+            }
+        })
+        .then(function (respJson) {
+            if (respJson) {
+                defaultResponseHnadler(res, respJson);
+            }
+        })
+        .catch(function (err) {
+            defaultResponseHnadler(res, null, err);
         });
 });
 

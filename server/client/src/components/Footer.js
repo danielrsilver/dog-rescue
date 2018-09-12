@@ -6,9 +6,15 @@ export default class Footer extends Component {
     return(
       <div>
         <div class="footer">
-          <p class="footer-block">Email: <a href="mailto:Info@DogFinder.Com">Info@DogFinder.Com</a></p>
+            <a href="mailto:Info@DogFinder.Com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.twitter.com/dogfinder/"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="https://www.facebook.com/dogfinder/"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com/dogfinder/"><i class="fab fa-instagram fa-lg"></i></a>
         </div>
       </div>
     );
   }
 }
+
+
+<a href="mailto:Info@DogFinder.Com">Info@DogFinder.Com</a>

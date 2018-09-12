@@ -5,7 +5,7 @@ import DogForm from './components/DogForm'
 import About from './components/About'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-// import DogPage from './components/DogPage'
+import DogDetails from './components/DogDetails'
 
 export default class App extends Component {
   render() {
@@ -19,6 +19,7 @@ export default class App extends Component {
               <Route path="/home" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/search" component={DogForm} />
+              <Route path="/pets/*" component={DogDetails} />
             <div>
               <Footer />
             </div>
