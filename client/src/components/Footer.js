@@ -15,6 +15,3 @@ export default class Footer extends Component {
     );
   }
 }
-
-
-<a href="mailto:Info@DogFinder.Com">Info@DogFinder.Com</a>

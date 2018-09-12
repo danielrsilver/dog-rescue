@@ -1,12 +1,11 @@
 import React from 'react';
-import {API_URL, getQueryParams, getProp} from "./Utils";
+import {API_URL, getProp} from "./Utils";
 import '../css/DogDetails.css';
 
 export default class DogDetails extends React.Component {
     constructor(props) {
         super(props);
         this.state  = { pet:null };
-
         this.findPet = this.findPet.bind(this);
     }
 
@@ -35,6 +34,8 @@ export default class DogDetails extends React.Component {
         city && (city = getProp(city));
         state && (state = getProp(state));
         zip && (zip = getProp(zip));
+        email && (email = getProp(email));
+        phone && (phone = getProp(phone));
         description && (description  = getProp(description));
         let photo = '';
         if(breed){
@@ -56,7 +57,7 @@ export default class DogDetails extends React.Component {
             <div>
             </div>
                 <div className="imageContainer">
-                    <img  style={{display:'block',maxWidth:'100%',maxHeight:'400px'}} src={photo} />
+                    <img alt="dog" style={{display:'block',maxWidth:'100%',maxHeight:'400px'}} src={photo} />
                 </div>
             </div>
                 <div class = "dogInformation">
@@ -92,8 +93,12 @@ export default class DogDetails extends React.Component {
                 <span className={'fieldsLabel'}>{city}, {state} {zip}</span>
             </div>
             <div>
-                <span className={'fieldsHeader'}>Contact: </span>
-                <span className={'fieldsLabel'}>{contact}</span>
+                <span className={'fieldsHeader'}>Phone: </span>
+                <span className={'fieldsLabel'}>{phone}</span>
+            </div>
+            <div>
+                <span className={'fieldsHeader'}>Email: </span>
+                <span className={'fieldsLabel'}>{email}</span>
             </div>
             <div style={{'margin-top':'20px','text-align': 'justify'}}>
                 <span className={'fieldsHeader'}>Description: </span>
