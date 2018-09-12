@@ -11,15 +11,18 @@ export default class About extends Component {
           <div className="about-founders">
             <div class="daniel">
               <img class="ui small circular image" alt="daniel" src={require('../images/Daniel.jpg')} />
-              <p>Daniel</p>
+              <div class="name">Daniel</div>
+              <div class="github"><a href="https://github.com/danielrsilver"><i class="fab fa-github"></i></a></div>
             </div>
             <div class="maria">
               <img class="ui small circular image" alt="maria" src={require('../images/Maria.jpg')} />
-              <p>Maria</p>
+              <div class="name">Maria</div>
+              <div class="github"><a href="https://github.com/mariapalves"><i class="fab fa-github"></i></a></div>
             </div>
             <div class="taylor">
               <img class="ui small circular image" alt="taylor" src={require('../images/Taylor.jpg')} />
-              <p>Taylor</p>
+              <div class="name">Taylor</div>
+              <div class="github"><a href="https://github.com/taylorkrause95"><i class="fab fa-github"></i></a></div>
             </div>
           </div>
       </div>
