@@ -1,0 +1,54 @@
+.homepage {
+  background-color: #EFEEF1;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 2.5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 12.5vw;
+}
+
+.home-paragraph1 {
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+.home-paragraph2 {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.home-search-button {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  text-align: justify;
+}
+
+.h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.home-bottom-section {
+  padding-top: 3vw;
+}
+
+
+/* .one:hover {
+  text-shadow: 1px 0px 20px grey;
+} */
+
+/* .two:hover {
+  text-shadow: 1px 0px 20px grey;
+} */
+
+/* .three:hover {
+  text-shadow: 1px 0px 20px grey;
+} */
