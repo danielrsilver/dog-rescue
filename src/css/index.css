@@ -1,0 +1,24 @@
+body {
+  background-color: #EFEEF1;
+}
+
+.form {
+  padding-top: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldsHeader {
+    color: #3d343c;
+    font-weight: bold;
+}
+.fieldsLabel {
+    color: #6e6e6e;
+    font-weight: bold;
+}
+.imageContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}

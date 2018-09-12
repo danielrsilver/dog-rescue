@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
 import React from 'react';
-import {API_URL, getQueryParams, getProp} from "../utils";
+import {API_URL, getQueryParams, getProp} from "./Utils";
+import '../css/DogForm.css'
 
 class DogForm extends React.Component {
   constructor(props) {
@@ -25,10 +25,6 @@ class DogForm extends React.Component {
       this.setstate({value: event.target.value});
     }
 
-    openDetails(pet){
-
-    }
-
     findPets(){
       const breed = this.breedRef.value;
       const location = this.locationRef.value;
@@ -40,20 +36,18 @@ class DogForm extends React.Component {
           alert("Location is required");
           return;
       }
-
       const query = {
           breed,
           location,
           age,
           sex,
           size
-    };
-
+      };
       fetch(`${API_URL}/find?${getQueryParams(query)}`).then(resp => resp.json()).then((resp) => {
           if(!resp.petfinder || !resp.petfinder.pets){
-              alert("Your search results returned no matches");
+              alert("Provided arguments are incorrect :)");
               return;
-            }
+          }
           const { petfinder : { pets: { pet : pets } } } = resp;
           this.setState({pets})
       })
@@ -65,72 +59,45 @@ class DogForm extends React.Component {
     }
 
     petRenderer = (pet) => {
-     let { media, age,id:{$t:petId },contact,name,sex }= pet;
-     age && (age=getProp(age));
-     name && (name  = getProp(name));
-     sex && (sex  = getProp(sex));
-     let photo = '';
-     if(contact && contact.phone){
-         contact = getProp(contact.phone);
-     }else if (contact){
-         contact = getProp(contact.email);
-     }
-     if(media && media.photos && media.photos.photo){
-     let { photos : { photo:photoObj } } = media;
-         photo = getProp(photoObj[2]);
-     } else {
-         return null
-     }
-<<<<<<< HEAD
-            return (<div className="pictures" style={{display:'inline-block',width:'20%',height:'300px','marginTop':'30px'}} key={petId}>
-=======
-            return (<div style={{display:'inline-block',width:'20%',height:'300px','marginTop':'30px'}} key={petId}>
->>>>>>> master
-                <div>
-                    <span>Name: </span>
-                    <span>{name}</span>
-                </div>
-                <div>
-                    <span>Sex: </span>
-                    <span>{sex}</span>
-                </div>
-                <div>
-                    <span>Age: </span>
-                    <span>{age}</span>
-                </div>
-                <div>
-                    <span>Contact: </span>
-                    <span>{contact}</span>
-                </div>
-<<<<<<< HEAD
-                <div className="pictures">
-                <img onClick={()=>{
-                    this.openDetails(pet);
-                  }} style={{display:'block',width:'100',maxHeight:'150px'}} src={photo}/>
-              </div>
-=======
-                <img onClick={()=>{
-                    this.openDetails(pet);
-                  }} style={{display:'block',width:'100',maxHeight:'150px'}} src={photo}/>
->>>>>>> master
-            </div>);
+       let { media, age,id:{$t:petId },contact,name,sex }= pet;
+       age && (age=getProp(age));
+       name && (name  = getProp(name));
+       sex && (sex  = getProp(sex));
+       let photo = '';
+       if(contact && contact.phone){
+           contact = getProp(contact.phone);
+       }else if (contact){
+           contact = getProp(contact.email);
+       }
+       if(media && media.photos && media.photos.photo){
+       let { photos : { photo:photoObj } } = media;
+           photo = getProp(photoObj[2]);
+       } else {
+           return null
+       }
+
+          return (<div className="pictures" style={{display:'inline-block',width:'20%',height:'300px','marginTop':'30px'}} key={petId}>
+          <div>
+            <span>Name: </span>
+              <span>{name}</span>
+          </div>
+          <div style={{height:'150px'}}>
+          <img onClick={()=>{
+              this.openDetails(pet);
+            }} style={{display:'block',maxWidth:'100%',maxHeight:'150px'}} src={photo}/>
+          </div>
+          <a style={{color:'#000000'}} href={`pets/${petId}`} target="_blank">See details</a>
+      </div>);
     }
 
   render() {
       const { breeds, pets } = this.state;
     return (
         <div className="dogform">
-            <label className="form">
-                Breed:
-                <select ref={(ref)=>{this.breedRef = ref}}>
-                    {breeds.map((item)=>{
-                    return <option key={item.value} value={item.value}>{item.value}</option>
-                })}
-                </select>
-            </label>
-            <label className="form">
-                Location:
+            <label className="form" class="form">
+                State:
                 <select ref={(ref)=>{this.locationRef = ref}} >
+                  <option value={'State'}>Select a State</option>
                   <option value={'Alabama'}>Alabama</option>
                   <option value={'Alaska'}>Alaska</option>
                   <option value={'Arizona'}>Arizona</option>
@@ -184,40 +151,55 @@ class DogForm extends React.Component {
                   <option value={'Wyoming'}>Wyoming</option>
                 </select>
             </label>
-            <label className="form">
+            <label className="form" class="form" id="form-breed">
+                Breed:
+                <select ref={(ref)=>{this.breedRef = ref}}>
+                    {breeds.map((item)=>{
+                    return <option key={item.value}
+                       value={item.value}>{item.value}</option>
+                })}
+                </select>
+            </label>
+            <label className="form" class="form">
+                Sex:
+                <select ref={(ref)=>{this.sexRef = ref}}>
+                  <option value={'Sex'}>Select a Gender</option>
+                  <option value={'M'}>Male</option>
+                  <option value={'F'}>Female</option>
+                  </select>
+            </label>
+            <label className="form" class="form">
+                Size:
+                <select ref={(ref)=>{this.sizeRef = ref}}>
+                  <option value={'Size'}>Select a Size</option>
+                  <option value={'S'}>Small</option>
+                  <option value={'M'}>Medium</option>
+                  <option value={'L'}>Large</option>
+                  <option value={'XL'}>Extra Large</option>
+                </select>
+            </label>
+            <label className="form" class="form">
                 Age:
                 <select ref={(ref)=>{this.ageRef = ref}}>
+                    <option value={'Age'}>Select an Age</option>
                     <option value={'Baby'}>Baby</option>
                     <option value={'Young'}>Young</option>
                     <option value={'Adult'}>Adult</option>
                     <option value={'Senior'}>Senior</option>
                 </select>
             </label>
-            <label className="form">
-                Sex:
-                <select ref={(ref)=>{this.sexRef = ref}}>
-                  <option value={'M'}>M</option>
-                  <option value={'F'}>F</option>
-                  </select>
-            </label>
-            <label className="form">
-                Size:
-                <select ref={(ref)=>{this.sizeRef = ref}}>
-                  <option value={'S'}>S</option>
-                  <option value={'M'}>M</option>
-                  <option value={'L'}>L</option>
-                  <option value={'XL'}>XL</option>
-                </select>
-            </label>
-            <label>
-<<<<<<< HEAD
-                <button class ="ui blue button" onClick={this.findPets}>Submit</button>
-=======
-                <button onClick={this.findPets}>Submit</button>
->>>>>>> master
+            <label className="search-button">
+              <div className="ui blue animated button" tabindex="0" onClick={this.findPets}>
+                <div className="visible content">
+                  Search</div>
+                <div className="hidden content">
+                  <i className="right arrow icon"></i>
+                </div>
+              </div>
             </label>
             <div style={{overflow:'auto',width:'80%',margin:'auto'}}>
-                { pets.map(this.petRenderer) }
+                {pets && pets.map(this.petRenderer) }
+                {!pets && "No search results :)" }
             </div>
         </div>
     );

@@ -1,0 +1,85 @@
+.homepage {
+  background-color: #EFEEF1;
+  text-align: center;
+  font-weight: bold;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  overflow: auto;
+  padding-top: 30px;
+}
+
+.home-search-button {
+  text-align: justify;
+  padding-top: 20px;
+}
+
+a:hover {
+  border-bottom: 2px solid #4286f4;
+}
+
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.flex-container {
+  display: flex;
+  height: 135px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.one {
+  margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.one:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px grey;
+}
+
+.two {
+  margin-left: 5vw;
+	margin-right: 5vw;
+
+}
+
+.two:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px grey;
+}
+
+.three {
+  margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.three:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px grey;
+}
+
+hr.style1 {
+	border-top: 1px solid #8c8b8b;
+  margin-top: 40px;
+}
+
+div::after {
+  content: "";
+  background: url(../images/Taylor.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

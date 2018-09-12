@@ -1,0 +1,50 @@
+.about {
+	font-weight: bold;
+	padding-top: 2.5vw;
+	font-size: 1.5em;
+	background-color: #EFEEF1;
+	text-align: center;
+	padding-left: 10px;
+}
+
+.about-header {
+  color: black;
+	font-size: 2em;
+}
+
+.about-paragraph {
+  text-align: justify;
+	margin-top: 3vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.about-header-founders {
+  margin-top: 5vw;
+}
+
+.about-founders {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  margin-right: 5vw;
+  margin-left: 5vw;
+	margin-top: 2.5vw;
+	margin-top: 5vw;
+	padding-bottom: 20vw;
+}
+
+.daniel {
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.maria {
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+
+.taylor {
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
