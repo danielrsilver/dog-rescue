@@ -1,7 +1,6 @@
 .about {
 	font-weight: bold;
 	padding-top: 2.5vw;
-	font-size: 1.5em;
 	background-color: #EFEEF1;
 	text-align: center;
 	padding-left: 10px;
@@ -9,18 +8,20 @@
 
 .about-header {
   color: black;
-	font-size: 2em;
+	font-size: 40px;
 }
 
 .about-paragraph {
-  text-align: justify;
+  text-align: center;
 	margin-top: 3vw;
   margin-left: 5vw;
   margin-right: 5vw;
+	font-size: 25px;
 }
 
 .about-header-founders {
   margin-top: 5vw;
+	font-size: 30px;
 }
 
 .about-founders {
@@ -32,6 +33,7 @@
 	margin-top: 2.5vw;
 	margin-top: 5vw;
 	padding-bottom: 20vw;
+	font-size: 20px;
 }
 
 .daniel {

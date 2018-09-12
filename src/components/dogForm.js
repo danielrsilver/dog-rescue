@@ -94,7 +94,7 @@ class DogForm extends React.Component {
       const { breeds, pets } = this.state;
     return (
         <div className="dogform">
-            <label className="form" class="form">
+            <label className="stateform" class="form">
                 State:
                 <select ref={(ref)=>{this.locationRef = ref}} >
                   <option value={'State'}>Select a State</option>
