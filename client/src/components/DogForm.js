@@ -81,10 +81,13 @@ export default class DogForm extends React.Component {
          return null
      }
 
-     return (<div className="pictures" key={petId}>
-       <div class='dogInfo' key={petId}>
-        <a href={`pets/${petId}`}><img class='dogPics' alt='dogPictures' src={photo}/></a>
-        <a style={{color:'#000000'}} href={`pets/${petId}`} target="_blank">See details</a>
+     return (<div class="ui link stackable cards" key={petId}>
+      <div class='card' key={petId}>
+        <div class= "image"><a href={`pets/${petId}`}><img class='dogPics' alt='dogPictures' src={photo}/></a></div>
+        <div class="content">
+        <div class="header"><a style={{color:'#000000'}} href={`pets/${petId}`} target="_blank">{name}</a></div>
+          <div class="meta"><span class="location">{city}, {state} {zip}</span></div>
+        </div>
       </div>
     </div>);
 }
@@ -93,8 +96,8 @@ export default class DogForm extends React.Component {
     const { breeds, pets } = this.state;
     return (
         <div className="dogform">
-          <label className="stateform" class="form">
-            <div class="options"><p>State</p>
+          <label className="stateform form">
+            <div className="options"><p>State</p>
             <select class="ui search dropdown" ref={(ref)=>{this.locationRef = ref}} >
               <option value="">Select a State</option>
               <option value="AL">Alabama</option>
@@ -160,9 +163,9 @@ export default class DogForm extends React.Component {
               </select></div>
           </label>
           <label className="form" class="form">
-            <div class="options"><p>Sex</p>
+            <div class="options"><p>Gender</p>
               <select class="ui fluid search dropdown" ref={(ref)=>{this.sexRef = ref}}>
-                <option value={''}>Select a Gender</option>
+                <option value={''}>Any</option>
                 <option value={'M'}>Male</option>
                 <option value={'F'}>Female</option>
                 </select></div>
@@ -170,7 +173,7 @@ export default class DogForm extends React.Component {
           <label className="form" class="form">
               <div class="options"><p>Size</p>
               <select class="ui fluid search dropdown" ref={(ref)=>{this.sizeRef = ref}}>
-                <option value={''}>Select a Size</option>
+                <option value={''}>Any</option>
                 <option value={'S'}>Small</option>
                 <option value={'M'}>Medium</option>
                 <option value={'L'}>Large</option>
@@ -180,7 +183,7 @@ export default class DogForm extends React.Component {
           <label className="form" class="form">
               <div class="options"><p>Age</p>
               <select class="ui fluid search dropdown" ref={(ref)=>{this.ageRef = ref}}>
-                  <option value={''}>Select an Age</option>
+                  <option value={''}>Any</option>
                   <option value={'Baby'}>Baby</option>
                   <option value={'Young'}>Young</option>
                   <option value={'Adult'}>Adult</option>

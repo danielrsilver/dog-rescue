@@ -1,17 +1,21 @@
+.imageContainer {
+  padding-top: 5vw;
+  padding-left: 30vw;
+  padding-right: 30vw;
+}
+
 .dogInformation {
   padding-top: 5vw;
   padding-right: 10vw;
   padding-left: 10vw;
   padding-bottom: 20vw;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: bold;
   text-align: center;
   width: 100%;
   line-height: 1.5em;
 }
 
-.imageContainer {
-  padding-top: 5vw;
-  padding-left: 30vw;
-  padding-right: 30vw;
+.description {
+
 }

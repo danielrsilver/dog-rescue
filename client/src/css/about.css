@@ -12,10 +12,18 @@
 
 .about-paragraph {
   text-align: justify;
-	margin-top: 3vw;
+	margin-top: 5vw;
   margin-left: 5vw;
   margin-right: 5vw;
 }
+
+.about-paragraph2 {
+  text-align: justify;
+	margin-top: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
 
 .about-header-founders {
 	margin-top: 5vw;

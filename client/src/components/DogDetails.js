@@ -4,13 +4,13 @@ import '../css/DogDetails.css';
 
 export default class DogDetails extends React.Component {
     constructor(props) {
-        super(props);
-        this.state  = { pet:null };
-        this.findPet = this.findPet.bind(this);
+      super(props);
+      this.state  = { pet:null };
+      this.findPet = this.findPet.bind(this);
     }
 
     componentDidMount(){
-        this.findPet();
+      this.findPet();
     }
 
     findPet(){
@@ -26,7 +26,7 @@ export default class DogDetails extends React.Component {
     }
 
     petRenderer = (pet) => {
-        let { media, age,id:{$t:petId },contact, contact:{city,state,zip,email,phone},name,size,sex,description,breeds:{breed} }= pet;
+        let { media, age,id:{$t:petId }, contact:{city,state,zip,email,phone},name,size,sex,description,breeds:{breed} }= pet;
         age && (age=getProp(age));
         name && (name  = getProp(name));
         sex && (sex  = getProp(sex));
@@ -41,11 +41,7 @@ export default class DogDetails extends React.Component {
         if(breed){
             breed = [].concat(breed);
         }
-        if(contact && contact.phone){
-            contact = getProp(contact.phone);
-        }else if (contact){
-            contact = getProp(contact.email);
-        }
+
         if(media && media.photos && media.photos.photo){
             let { photos : { photo:photoObj } } = media;
             photo = getProp(photoObj[3]);
@@ -53,57 +49,31 @@ export default class DogDetails extends React.Component {
             return null
         }
         return (<div key={petId}>
-            <div>
-            <div>
+            <div className="imageContainer">
+              <img alt="dog" src={photo} img className="ui centered medium circular image" />
             </div>
-                <div className="imageContainer">
-                    <img alt="dog" style={{display:'block',maxWidth:'100%',maxHeight:'400px'}} src={photo} />
-                </div>
-            </div>
-                <div class = "dogInformation">
-                  <div>
-              <span className={'fieldsHeader'}>Name: </span>
-              <span className={'fieldsLabel'}>{name}</span>
+            <div className = "dogInformation">
+              <div className="ui message attached">
+                <div className={'fieldsHeader'}>Name: {name}</div>
+                <div className={'fieldsHeader'}>Breed: {breed && breed.map((item,index)=>{
+                  let separator = ' ,';
+                  if((breed.length - 1 === index) || index === 0 ){
+                      separator = '';
+                  }
+                 return getProp(item) + separator;
+                })}</div>
+                {!breed && <div className={'fieldsLabel'}>N/A</div>}
+                <div className={'fieldsHeader'}>Gender: {sex}</div>
+                <div className={'fieldsHeader'}>Size: {size}</div>
+                <div className={'fieldsHeader'}>Age: {age} </div>
+                <div className={'fieldsHeader'}>Location: {city}, {state} {zip}</div>
+                <div className={'fieldsHeader'}>Phone: {phone}</div>
+                <div className={'fieldsHeader'}>Email: {email}</div>
               </div>
-                    <div>
-                        <span className={'fieldsHeader'}>Breed: </span>
-                        <span className={'fieldsLabel'}>{breed && breed.map((item,index)=>{
-                            let separator = ' ,';
-                            if((breed.length - 1 === index) || index === 0 ){
-                                separator = '';
-                            }
-                           return getProp(item) + separator;
-                        })}</span>
-                        {!breed && <span className={'fieldsLabel'}>N/A</span>}
-                    </div>
-            <div>
-                <span className={'fieldsHeader'}>Sex: </span>
-                <span className={'fieldsLabel'}>{sex}</span>
-            </div>
-            <div>
-                <span className={'fieldsHeader'}>Size: </span>
-                <span className={'fieldsLabel'}>{size}</span>
-            </div>
-            <div>
-                <span className={'fieldsHeader'}>Age: </span>
-                <span className={'fieldsLabel'}>{age}</span>
-            </div>
-            <div>
-                <span className={'fieldsHeader'}>Location: </span>
-                <span className={'fieldsLabel'}>{city}, {state} {zip}</span>
-            </div>
-            <div>
-                <span className={'fieldsHeader'}>Phone: </span>
-                <span className={'fieldsLabel'}>{phone}</span>
-            </div>
-            <div>
-                <span className={'fieldsHeader'}>Email: </span>
-                <span className={'fieldsLabel'}>{email}</span>
-            </div>
-            <div style={{'margin-top':'20px','text-align': 'justify'}}>
-                <span className={'fieldsHeader'}>Description: </span>
-                <span className={'fieldsLabel'} >{description || 'There is no description available for this dog :) Please contact the owner for further information.'}</span>
-            </div>
+              <div className="ui attached bottom message" style={{'margin-top':'20px','text-align': 'justify'}}>
+                <div className="description">Description: </div>
+                <div className={'fieldsLabel'} >{description || 'There is no description available for this dog :) Please contact the owner for further information.'}</div>
+              </div>
             </div>
         </div>);
     }

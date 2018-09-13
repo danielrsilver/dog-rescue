@@ -4,14 +4,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const app = express();
-const port = 3300;
+const PORT = process.env.PORT || 3300;
 
 
 const allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-
     next();
 }
 
@@ -28,9 +27,7 @@ function defaultResponseHnadler(res, json, err) {
 
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
-app.listen(port, function () {
-    console.log('application is running on port  ' + port);
-});
+app.listen(PORT, () => console.log(`application is running on port ${PORT}`));
 
 const API_URL = 'http://api.petfinder.com';
 
