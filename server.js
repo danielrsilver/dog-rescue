@@ -9,6 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 3300;
 
 
+function getQueryParams(query) {
+  let queryUrl = '';
+  for (let key in query) {
+    if (query[key])
+      queryUrl += `&${key}=${query[key]}`
+  }
+  return queryUrl;
+}
+
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -92,12 +101,3 @@ app.get('/get/:id', function(req, res) {
       defaultResponseHnadler(res, null, err);
     });
 });
-
-function getQueryParams(query) {
-  let queryUrl = '';
-  for (let key in query) {
-    if (query[key])
-      queryUrl += `&${key}=${query[key]}`
-  }
-  return queryUrl;
-}
