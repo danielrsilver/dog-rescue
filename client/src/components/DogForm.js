@@ -114,19 +114,19 @@ export default class DogForm extends React.Component {
       return null
     }
 
-    return (<div class="ui link stackable cards" key={petId}>
-      <div class='card' key={petId}>
-        <div class="image">
-          <a href={`pets/${petId}`}><img class='dogPics' alt='dogPictures' src={photo}/></a>
+    return (<div className="ui link stackable cards" key={petId}>
+      <div className='card' key={petId}>
+        <div className="image">
+          <a href={`pets/${petId}`}><img className='dogPics' alt='dogPictures' src={photo}/></a>
         </div>
-        <div class="content">
-          <div class="header">
+        <div className="content">
+          <div className="header">
             <a style={{
                 color: '#000000'
               }} href={`pets/${petId}`} target="_blank">{name}</a>
           </div>
-          <div class="meta">
-            <span class="location">{city}, {state}
+          <div className="meta">
+            <span className="location">{city}, {state}
               {zip}</span>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default class DogForm extends React.Component {
         <label className="stateform form">
           <div className="options state">
             <p>State</p>
-            <select class="ui search dropdown" ref={(ref) => {
+            <select className="ui search dropdown" ref={(ref) => {
                 this.locationRef = ref
               }}>
               <option value="">Select a State</option>
@@ -200,9 +200,9 @@ export default class DogForm extends React.Component {
           </div>
         </label>
         <label className="form" id="form-breed">
-          <div class="options breed">
+          <div className="options breed">
             <p>Breed</p>
-            <select class="ui fluid search dropdown" multiple="" ref={(ref) => {
+            <select className="ui fluid search dropdown" multiple="" ref={(ref) => {
                 this.breedRef = ref
               }}>
               {
@@ -213,10 +213,10 @@ export default class DogForm extends React.Component {
             </select>
           </div>
         </label>
-        <label className="form" class="form">
-          <div class="options">
+        <label className="form">
+          <div className="options">
             <p>Gender</p>
-            <select class="ui fluid search dropdown" ref={(ref) => {
+            <select className="ui fluid search dropdown" ref={(ref) => {
                 this.sexRef = ref
               }}>
               <option value={''}>Any</option>
@@ -225,10 +225,10 @@ export default class DogForm extends React.Component {
             </select>
           </div>
         </label>
-        <label className="form" class="form">
-          <div class="options size">
+        <label className="form">
+          <div className="options size">
             <p>Size</p>
-            <select class="ui fluid search dropdown" ref={(ref) => {
+            <select className="ui fluid search dropdown" ref={(ref) => {
                 this.sizeRef = ref
               }}>
               <option value={''}>Any</option>
@@ -239,10 +239,10 @@ export default class DogForm extends React.Component {
             </select>
           </div>
         </label>
-        <label className="form age" class="form">
-          <div class="options age">
+        <label className="form age">
+          <div className="options age">
             <p>Age</p>
-            <select class="ui fluid search dropdown" ref={(ref) => {
+            <select className="ui fluid search dropdown" ref={(ref) => {
                 this.ageRef = ref
               }}>
               <option value={''}>Any</option>
@@ -263,8 +263,8 @@ export default class DogForm extends React.Component {
           </div>
         </label>
       </div>
-      <div class="ui divider"></div>
-      <div class="petRenderer">
+      <div className="ui divider"></div>
+      <div className="petRenderer">
         {pets && pets.map(this.petRenderer)}
         {!pets && "No search results :)"}
       </div>
