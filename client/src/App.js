@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Route, Switch } from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 import DogForm from './components/DogForm'
 import About from './components/About'
@@ -11,17 +11,17 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <div>
-            <Nav />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/search" component={DogForm} />
-              <Route path="/pets/*" component={DogDetails} />
-            </Switch>
-            <Footer />
-          </div>
+      <div>
+        <Nav/>
+        <Switch>
+          <Route exact="exact" path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/search" component={DogForm}/>
+          <Route path="/pets/*" component={DogDetails}/>
+        </Switch>
+        <Footer/>
       </div>
-    )
+    </div>
+  )
   }
 }

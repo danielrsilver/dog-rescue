@@ -12,8 +12,8 @@ html,body {
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	-webkit-margin-before: 2.5vw;
-	-webkit-margin-after: 2.5vw;
+	-webkit-margin-before: 1vw;
+	-webkit-margin-after: 1vw;
 	-webkit-margin-start: 2.5vw;
 	-webkit-margin-end: 2.5vw;
 }
@@ -89,6 +89,7 @@ html,body {
 			object-fit: contain;
 		}
 		.formOptions {
+			-webkit-margin-before: 2vw;
 			align-items: center;
 			justify-content: center;
 			display: block;
