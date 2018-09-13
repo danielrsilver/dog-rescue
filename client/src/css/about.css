@@ -62,3 +62,79 @@
 .github {
   margin-top: 1vw;
 }
+
+@media only screen and (max-width: 321px) {
+  .about {
+    text-align: center;
+    font-weight: bold;
+  	padding-top: 2.5vw;
+  	font-size: .83em;
+  }
+
+  .about-header {
+    color: black;
+  	font-size: 2em;
+  }
+
+  .about-paragraph {
+    text-align: justify;
+  	margin-top: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .about-paragraph2 {
+    text-align: justify;
+  	margin-top: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .about-header-founders {
+  	margin-top: 5vw;
+  }
+
+  .about-founders {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+    margin-right: 5vw;
+    margin-left: 5vw;
+  	margin-top: 2.5vw;
+  	padding-bottom: 10vw;
+  	font-size: 1.5em;
+  }
+
+  .daniel {
+  	margin-left: 5vw;
+  	margin-right: 5vw;
+  }
+
+  .maria {
+  	margin-left: 5vw;
+  	margin-right: 5vw;
+  }
+
+  .taylor {
+  	margin-left: 5vw;
+  	margin-right: 5vw;
+  }
+
+  .name {
+    margin-top: 1vw;
+  }
+
+  .github {
+    margin-top: 1vw;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 321px) {
+  .about {
+  	font-size: 1em;
+  }
+
+  .about-header-founders {
+  	margin-top: 10vw;
+  }
+}
