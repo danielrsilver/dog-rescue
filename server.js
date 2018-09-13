@@ -8,16 +8,6 @@ const fetch = require('node-fetch');
 const app = express();
 const PORT = process.env.PORT || 3300;
 
-
-function getQueryParams(query) {
-  let queryUrl = '';
-  for (let key in query) {
-    if (query[key])
-      queryUrl += `&${key}=${query[key]}`
-  }
-  return queryUrl;
-}
-
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -69,7 +59,7 @@ app.get('/breeds', function(req, res) {
 });
 
 app.get('/find', function(req, res) {
-  fetch(`${API_URL}/pet.find?key=${process.env.PETFINDER_API_KEY}&format=json&animal=dog${getQueryParams(req.query)}`)
+  fetch(`${API_URL}/pet.find?key=${process.env.PETFINDER_API_KEY}&format=json&animal=dog&count=100${getQueryParams(req.query)}`)
     .then(function(response) {
       if (response.status < 400) {
         return response.json();
@@ -86,7 +76,7 @@ app.get('/find', function(req, res) {
 });
 
 app.get('/get/:id', function(req, res) {
-  fetch(`${API_URL}/pet.get?key=${process.env.PETFINDER_API_KEY}&format=json&id=${req.params.id}`)
+  fetch(`${API_URL}/pet.get?key=${process.env.PETFINDER_API_KEY}&format=json&&id=${req.params.id}`)
     .then(function(response) {
       if (response.status < 400) {
         return response.json();
@@ -101,3 +91,12 @@ app.get('/get/:id', function(req, res) {
       defaultResponseHnadler(res, null, err);
     });
 });
+
+function getQueryParams(query) {
+  let queryUrl = '';
+  for (let key in query) {
+    if (query[key])
+      queryUrl += `&${key}=${query[key]}`
+  }
+  return queryUrl;
+}

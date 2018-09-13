@@ -30,10 +30,10 @@ export default class DogForm extends React.Component {
 
   findPets() {
     const breed = this.breedRef.value;
-    const location = this.locationRef.value;
     const age = this.ageRef.value;
     const sex = this.sexRef.value;
     const size = this.sizeRef.value;
+    const location = this.locationRef.value;
 
     if (!location) {
       alert("Location is required");
@@ -44,7 +44,7 @@ export default class DogForm extends React.Component {
       location,
       age,
       sex,
-      size
+      size,
     };
     fetch(`${API_URL}/find?${getQueryParams(query)}`).then(resp => resp.json()).then((resp) => {
       if (!resp.petfinder || !resp.petfinder.pets) {
@@ -83,7 +83,7 @@ export default class DogForm extends React.Component {
       contact: {
         city,
         state,
-        zip,
+        location,
         email,
         phone
       },
@@ -96,7 +96,7 @@ export default class DogForm extends React.Component {
     breed && (breed = getProp(breed));
     city && (city = getProp(city));
     state && (state = getProp(state));
-    zip && (zip = getProp(zip));
+    location && (location = getProp(location));
     email && (email = getProp(email));
     phone && (phone = getProp(phone));
     description && (description = getProp(description));
@@ -127,7 +127,7 @@ export default class DogForm extends React.Component {
           </div>
           <div className="meta">
             <span className="location">{city}, {state}
-              {zip}</span>
+              {location}</span>
           </div>
         </div>
       </div>
@@ -138,67 +138,18 @@ export default class DogForm extends React.Component {
     const {breeds, pets} = this.state;
     return (<div className="dogform">
       <div className="formOptions">
-        <label className="stateform form">
-          <div className="options state">
-            <p>State</p>
-            <select className="ui search dropdown" ref={(ref) => {
-                this.locationRef = ref
-              }}>
-              <option value="">Select a State</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DE">Delaware</option>
-              <option value="DC">District Of Columbia</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="IA">Iowa</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="ME">Maine</option>
-              <option value="MD">Maryland</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MS">Mississippi</option>
-              <option value="MO">Missouri</option>
-              <option value="MT">Montana</option>
-              <option value="NE">Nebraska</option>
-              <option value="NV">Nevada</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NY">New York</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VT">Vermont</option>
-              <option value="VA">Virginia</option>
-              <option value="WA">Washington</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
-            </select>
+
+        <label className="form">
+          <div className="ui fluid form">
+            <div className="field location">
+              <label className="zip">Zip Code</label>
+              <input type="text" placeholder="ex. 33130" ref={(ref) => {
+                  this.locationRef = ref
+                }} />
+            </div>
           </div>
         </label>
+
         <label className="form" id="form-breed">
           <div className="options breed">
             <p>Breed</p>
@@ -239,6 +190,7 @@ export default class DogForm extends React.Component {
             </select>
           </div>
         </label>
+
         <label className="form age">
           <div className="options age">
             <p>Age</p>
@@ -249,10 +201,10 @@ export default class DogForm extends React.Component {
               <option value={'Baby'}>Baby</option>
               <option value={'Young'}>Young</option>
               <option value={'Adult'}>Adult</option>
-              <option value={'Senior'}>Senior</option>
             </select>
           </div>
         </label>
+
         <label className="search-button">
           <div className="ui blue animated button" tabindex="0" onClick={this.findPets}>
             <div className="visible content">

@@ -8,6 +8,18 @@ html,body {
 	margin-left: 1vw;
 }
 
+.zip {
+	text-align: center;
+	line-height: 1.7vw;
+	padding-top: 1vw;
+}
+
+.location {
+	align-items: center;
+	justify-content: center;
+	padding-left: 1.7vw;
+}
+
 .formOptions {
 	align-items: center;
 	justify-content: center;
