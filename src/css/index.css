@@ -2,13 +2,20 @@ body {
   background-color: #EFEEF1;
 }
 
-.form {
+h1 {
+  color: black;
+}
+
+a:hover {
+  border-bottom: 2px solid #4286f4;
+}
+
+/* .form {
   padding-top: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-
 .fieldsHeader {
     color: #3d343c;
     font-weight: bold;
@@ -21,4 +28,4 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
-}
+} */

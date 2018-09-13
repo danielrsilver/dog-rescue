@@ -1,29 +1,27 @@
 import React, {Component} from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
-import dogForm from './components/dogForm'
+import DogForm from './components/DogForm'
 import About from './components/About'
 import Nav from './components/Nav'
-import DogDetails from './components/dogDetails'
-import Footer from './components/footer'
-
-import axios from 'axios'
+import Footer from './components/Footer'
+import DogDetails from './components/DogDetails'
 
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <div>
-            <Nav />
-          </div>
-            <Route path="/home" component={Home} />
-            <Route path="/search" component={dogForm} />
-            <Route path="/about" component={About} />
-            <Route path="/pets/*" component={DogDetails} />
-            <Footer />
-          </div>
-      </BrowserRouter>
-    )
+      <div>
+      <div>
+        <Nav/>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/search" component={DogForm}/>
+          <Route path="/pets/*" component={DogDetails}/>
+        </Switch>
+        <Footer/>
+      </div>
+    </div>
+  )
   }
 }
