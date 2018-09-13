@@ -96,8 +96,9 @@ export default class DogForm extends React.Component {
     const { breeds, pets } = this.state;
     return (
         <div className="dogform">
+          <div className="formOptions">
           <label className="stateform form">
-            <div className="options"><p>State</p>
+            <div className="options state"><p>State</p>
             <select class="ui search dropdown" ref={(ref)=>{this.locationRef = ref}} >
               <option value="">Select a State</option>
               <option value="AL">Alabama</option>
@@ -153,8 +154,8 @@ export default class DogForm extends React.Component {
               <option value="WY">Wyoming</option>
             </select></div>
           </label>
-          <label className="form" class="form" id="form-breed">
-            <div class="options"><p>Breed</p>
+          <label className="form" id="form-breed">
+            <div class="options breed"><p>Breed</p>
               <select class="ui fluid search dropdown" multiple="" ref={(ref)=>{this.breedRef = ref}}>
                 {breeds.map((item)=>{
                   return <option key={item.value}
@@ -171,7 +172,7 @@ export default class DogForm extends React.Component {
                 </select></div>
           </label>
           <label className="form" class="form">
-              <div class="options"><p>Size</p>
+              <div class="options size"><p>Size</p>
               <select class="ui fluid search dropdown" ref={(ref)=>{this.sizeRef = ref}}>
                 <option value={''}>Any</option>
                 <option value={'S'}>Small</option>
@@ -180,8 +181,8 @@ export default class DogForm extends React.Component {
                 <option value={'XL'}>Extra Large</option>
               </select></div>
           </label>
-          <label className="form" class="form">
-              <div class="options"><p>Age</p>
+          <label className="form age" class="form">
+              <div class="options age"><p>Age</p>
               <select class="ui fluid search dropdown" ref={(ref)=>{this.ageRef = ref}}>
                   <option value={''}>Any</option>
                   <option value={'Baby'}>Baby</option>
@@ -199,6 +200,7 @@ export default class DogForm extends React.Component {
               </div>
             </div>
           </label>
+        </div>
           <div class="ui divider"></div>
           <div class="petRenderer">
               {pets && pets.map(this.petRenderer) }
